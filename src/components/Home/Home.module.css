@@ -1,0 +1,8 @@
+.heading {
+    font-weight: 300;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+}
