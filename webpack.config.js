@@ -22,10 +22,12 @@ const cssHandler = {
     },
 }
 
+/** @type {import('webpack').Configuration} */
 const config = {
     entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        clean: true,
     },
     devServer: {
         open: true,
@@ -64,6 +66,11 @@ const config = {
             '@': path.resolve(__dirname, './src/'),
         },
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
     },
 }
 
