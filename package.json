@@ -19,6 +19,7 @@
         "@types/react-dom": "^17.0.21",
         "@typescript-eslint/eslint-plugin": "^6.7.3",
         "@typescript-eslint/parser": "^6.7.3",
+        "@yandex/ui": "^3.33.0",
         "autoprefixer": "^10.4.16",
         "css-loader": "^6.8.1",
         "eslint": "^8.50.0",
