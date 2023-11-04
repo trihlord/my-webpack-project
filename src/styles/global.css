@@ -4,3 +4,9 @@ body {
     margin: 0;
     font-family: var(--typography-font-family);
 }
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
