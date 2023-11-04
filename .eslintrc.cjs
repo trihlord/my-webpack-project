@@ -9,6 +9,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:react/jsx-runtime',
         'plugin:react-hooks/recommended',
+        'plugin:storybook/recommended',
         'plugin:prettier/recommended',
     ],
     overrides: [
