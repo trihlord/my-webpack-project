@@ -1,0 +1,13 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search {
+    width: 200px;
+}
+
+.icon {
+    top: 10px;
+    left: 10px;
+}

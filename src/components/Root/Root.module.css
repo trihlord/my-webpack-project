@@ -1,0 +1,8 @@
+.page {
+    padding: var(--space-2-xl) var(--space-2-xl) 0 var(--space-2-xl);
+}
+
+.main {
+    display: grid;
+    gap: var(--space-m);
+}
