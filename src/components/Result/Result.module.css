@@ -1,0 +1,16 @@
+.card {
+    display: grid;
+    gap: var(--space-s);
+    justify-items: center;
+    padding: var(--space-xl);
+    margin-inline: auto;
+    background-color: var(--color-bg-ghost);
+    border-radius: var(--space-xl);
+}
+
+.icon {
+    display: inline-flex;
+    padding: var(--space-m);
+    background-color: var(--color-bg-ghost);
+    border-radius: var(--radius-full);
+}
