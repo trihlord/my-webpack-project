@@ -1,6 +1,7 @@
 import Result from '@/components/Result'
 import Toolbar from '@/components/Toolbar'
 import { Text } from '@/lib/Text'
+import { HelpOutline } from '@/lib/icons'
 
 function Home() {
     return (
@@ -9,7 +10,11 @@ function Home() {
                 Home Page
             </Text>
             <Toolbar size={'m'} view={'default'} />
-            <Result />
+            <Result
+                iconType={HelpOutline}
+                headline={'No Items'}
+                subheader={'No items still exist. Please create a new item first.'}
+            />
         </>
     )
 }

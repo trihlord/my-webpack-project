@@ -1,4 +1,4 @@
-.card {
+.result {
     display: grid;
     gap: var(--space-s);
     justify-items: center;

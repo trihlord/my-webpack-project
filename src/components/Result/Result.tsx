@@ -1,19 +1,28 @@
 import { Text } from '@/lib/Text'
-import { HelpOutline } from '@/lib/icons'
+import { provideIcon } from '@/lib/provideIcon'
+import { type ReactNode } from 'react'
 import styles from './Result.module.css'
 
-function Result() {
+const iconProps = { size: 32 } as const
+
+type IconTypePropsTuple = Parameters<typeof provideIcon<typeof iconProps>>
+type IconType = IconTypePropsTuple[0]
+
+interface ResultProps {
+    iconType: IconType
+    headline: ReactNode
+    subheader: ReactNode
+}
+
+function Result({ iconType, headline, subheader }: ResultProps) {
+    const icon = provideIcon(iconType, iconProps)(styles.icon)
     return (
-        <div className={styles.card}>
-            <div className={styles.icon}>
-                <HelpOutline size={32} />
-            </div>
+        <div className={styles.result}>
+            {icon}
             <Text typography={'headline-s'} weight={'medium'}>
-                No Items
+                {headline}
             </Text>
-            <Text typography={'subheader-l'}>
-                No items still exist. Please create a new item first.
-            </Text>
+            <Text typography={'subheader-l'}>{subheader}</Text>
         </div>
     )
 }
