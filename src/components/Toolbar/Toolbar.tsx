@@ -2,6 +2,7 @@ import { Button, type IButtonProps } from '@/lib/Button'
 import { Textinput, type ITextinputProps } from '@/lib/Textinput'
 import { Plus, Search, type PlusProps, type SearchProps } from '@/lib/icons'
 import { provideIcon } from '@/lib/provideIcon'
+import { useTranslation } from 'react-i18next'
 import styles from './Toolbar.module.css'
 
 type ToolbarSize = NonNullable<IButtonProps['size'] & ITextinputProps['size']>
@@ -23,11 +24,12 @@ interface ToolbarProps {
 }
 
 function Toolbar({ size, view }: ToolbarProps) {
+    const { t } = useTranslation()
     const iconSize = getIconSize(size)
     return (
         <div className={styles.toolbar}>
             <Button size={size} view={view} iconLeft={provideIcon(Plus, { size: iconSize })}>
-                Add Item
+                {t`Add Item`}
             </Button>
             <Textinput
                 className={styles.search}
@@ -35,7 +37,7 @@ function Toolbar({ size, view }: ToolbarProps) {
                 view={view}
                 iconLeft={<Search className={styles.icon} size={iconSize} />}
                 inputMode={'search'}
-                placeholder={'Search Item'}
+                placeholder={t`Search Item`}
             />
         </div>
     )
