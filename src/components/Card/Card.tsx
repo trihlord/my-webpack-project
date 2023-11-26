@@ -1,23 +1,23 @@
 import { Text } from '@/lib/Text'
 import { provideIcon } from '@/lib/provideIcon'
 import { type ReactNode } from 'react'
-import styles from './Result.module.css'
+import styles from './Card.module.css'
 
 const iconProps = { size: 32 } as const
 
 type IconTypePropsTuple = Parameters<typeof provideIcon<typeof iconProps>>
 type IconType = IconTypePropsTuple[0]
 
-interface ResultProps {
+interface CardProps {
     iconType: IconType
     headline: ReactNode
     subheader: ReactNode
     children: ReactNode
 }
 
-function Result({ iconType, headline, subheader, children }: ResultProps) {
+function Card({ iconType, headline, subheader, children }: CardProps) {
     return (
-        <section className={styles.result}>
+        <section className={styles.card}>
             {provideIcon(iconType, iconProps)(styles.icon)}
             <Text typography={'headline-s'} align={'center'} weight={'medium'} as={'h2'}>
                 {headline}
@@ -30,4 +30,4 @@ function Result({ iconType, headline, subheader, children }: ResultProps) {
     )
 }
 
-export default Result
+export default Card

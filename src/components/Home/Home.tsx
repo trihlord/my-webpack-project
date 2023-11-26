@@ -1,4 +1,4 @@
-import Result from '@/components/Result'
+import Card from '@/components/Card'
 import Toolbar from '@/components/Toolbar'
 import { Button } from '@/lib/Button'
 import { Text } from '@/lib/Text'
@@ -13,7 +13,7 @@ function Home() {
                 {t`Home Page`}
             </Text>
             <Toolbar size={'m'} view={'default'} />
-            <Result
+            <Card
                 iconType={HelpOutline}
                 headline={t`No Items`}
                 subheader={t`No items still exist. Please create a new item first.`}
@@ -21,7 +21,7 @@ function Home() {
                 <Button size={'m'} view={'default'}>
                     {t`Add Item`}
                 </Button>
-            </Result>
+            </Card>
         </>
     )
 }
