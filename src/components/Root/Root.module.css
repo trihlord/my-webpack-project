@@ -1,8 +1,12 @@
-.root {
-    padding: var(--space-2-xl) var(--space-2-xl) 0 var(--space-2-xl);
+.header {
+    height: var(--space-4-xl);
+    padding-inline: var(--space-2-xl);
 }
 
-.page {
+.main {
     display: grid;
     gap: var(--space-xl);
+    padding: var(--space-2-xl) var(--space-2-xl) 0 var(--space-2-xl);
+    border-top-left-radius: var(--space-2-xl);
+    border-top-right-radius: var(--space-2-xl);
 }

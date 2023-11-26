@@ -3,11 +3,12 @@ import styles from './Root.module.css'
 
 function Root() {
     return (
-        <div className={styles.root}>
-            <main className={styles.page}>
+        <>
+            <header className={styles.header}></header>
+            <main className={styles.main}>
                 <Outlet />
             </main>
-        </div>
+        </>
     )
 }
 
