@@ -12,9 +12,10 @@ interface ResultProps {
     iconType: IconType
     headline: ReactNode
     subheader: ReactNode
+    children: ReactNode
 }
 
-function Result({ iconType, headline, subheader }: ResultProps) {
+function Result({ iconType, headline, subheader, children }: ResultProps) {
     return (
         <div className={styles.result}>
             {provideIcon(iconType, iconProps)(styles.icon)}
@@ -24,6 +25,7 @@ function Result({ iconType, headline, subheader }: ResultProps) {
             <Text typography={'subheader-l'} align={'center'}>
                 {subheader}
             </Text>
+            {children}
         </div>
     )
 }

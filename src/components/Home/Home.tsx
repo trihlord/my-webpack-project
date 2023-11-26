@@ -1,5 +1,6 @@
 import Result from '@/components/Result'
 import Toolbar from '@/components/Toolbar'
+import { Button } from '@/lib/Button'
 import { Text } from '@/lib/Text'
 import { HelpOutline } from '@/lib/icons'
 
@@ -14,7 +15,11 @@ function Home() {
                 iconType={HelpOutline}
                 headline={'No Items'}
                 subheader={'No items still exist. Please create a new item first.'}
-            />
+            >
+                <Button size={'m'} view={'default'}>
+                    Add Item
+                </Button>
+            </Result>
         </>
     )
 }
