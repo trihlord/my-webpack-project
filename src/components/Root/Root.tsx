@@ -4,9 +4,9 @@ import styles from './Root.module.css'
 function Root() {
     return (
         <div className={styles.root}>
-            <div className={styles.page}>
+            <main className={styles.page}>
                 <Outlet />
-            </div>
+            </main>
         </div>
     )
 }

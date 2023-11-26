@@ -17,16 +17,16 @@ interface ResultProps {
 
 function Result({ iconType, headline, subheader, children }: ResultProps) {
     return (
-        <div className={styles.result}>
+        <section className={styles.result}>
             {provideIcon(iconType, iconProps)(styles.icon)}
-            <Text typography={'headline-s'} align={'center'} weight={'medium'}>
+            <Text typography={'headline-s'} align={'center'} weight={'medium'} as={'h2'}>
                 {headline}
             </Text>
-            <Text typography={'subheader-l'} align={'center'}>
+            <Text typography={'subheader-l'} align={'center'} as={'p'}>
                 {subheader}
             </Text>
             {children}
-        </div>
+        </section>
     )
 }
 
