@@ -15,7 +15,8 @@ function getIconSize(toolbarSize: ToolbarSize | undefined) {
         m: 16,
         s: 12,
     }
-    return toolbarSize ? iconSizes[toolbarSize] : defaultIconSize
+    const size = toolbarSize ? iconSizes[toolbarSize] : defaultIconSize
+    return { size }
 }
 
 interface ToolbarProps {
@@ -28,14 +29,14 @@ function Toolbar({ size, view }: ToolbarProps) {
     const iconSize = getIconSize(size)
     return (
         <div className={styles.toolbar}>
-            <Button size={size} view={view} iconLeft={provideIcon(Plus, { size: iconSize })}>
+            <Button size={size} view={view} iconLeft={provideIcon(Plus, iconSize)}>
                 {t`Add Item`}
             </Button>
             <Textinput
                 className={styles.search}
                 size={size}
                 view={view}
-                iconLeft={<Search className={styles.icon} size={iconSize} />}
+                iconLeft={provideIcon(Search, iconSize)(styles.icon)}
                 inputMode={'search'}
                 placeholder={t`Search Item`}
             />
