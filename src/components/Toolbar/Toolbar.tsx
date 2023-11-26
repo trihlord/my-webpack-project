@@ -34,6 +34,7 @@ function Toolbar({ size, view }: ToolbarProps) {
                 size={size}
                 view={view}
                 iconLeft={<Search className={styles.icon} size={iconSize} />}
+                inputMode={'search'}
                 placeholder={'Search Item'}
             />
         </div>

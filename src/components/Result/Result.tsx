@@ -15,14 +15,15 @@ interface ResultProps {
 }
 
 function Result({ iconType, headline, subheader }: ResultProps) {
-    const icon = provideIcon(iconType, iconProps)(styles.icon)
     return (
         <div className={styles.result}>
-            {icon}
-            <Text typography={'headline-s'} weight={'medium'}>
+            {provideIcon(iconType, iconProps)(styles.icon)}
+            <Text typography={'headline-s'} align={'center'} weight={'medium'}>
                 {headline}
             </Text>
-            <Text typography={'subheader-l'}>{subheader}</Text>
+            <Text typography={'subheader-l'} align={'center'}>
+                {subheader}
+            </Text>
         </div>
     )
 }

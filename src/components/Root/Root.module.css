@@ -4,5 +4,5 @@
 
 .page {
     display: grid;
-    gap: var(--space-m);
+    gap: var(--space-xl);
 }

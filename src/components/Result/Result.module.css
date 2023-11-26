@@ -1,7 +1,8 @@
 .result {
     display: grid;
     gap: var(--space-s);
-    justify-items: center;
+    place-items: center;
+    width: min(100%, var(--width-2-xs));
     padding: var(--space-xl);
     margin-inline: auto;
     background-color: var(--color-bg-ghost);
