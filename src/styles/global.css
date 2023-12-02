@@ -1,18 +1,14 @@
 html,
 body {
     padding: 0;
-    margin: 0;
     font-family: var(--typography-font-family);
+    color: var(--color-typo-primary);
+    background-color: var(--color-bg-default);
 }
 
 *,
 ::before,
 ::after {
     box-sizing: border-box;
-}
-
-h1,
-h2,
-p {
     margin: 0;
 }
