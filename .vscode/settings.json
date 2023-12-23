@@ -4,7 +4,8 @@
     "editor.formatOnSave": true,
     "editor.linkedEditing": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.stylelint": true
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
     },
     "svgPreview.autoOpen": false
 }
