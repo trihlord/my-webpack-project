@@ -24,7 +24,7 @@ function getIconSize(toolbarSize: ToolbarSize | undefined) {
     return { size }
 }
 
-interface ToolbarProps {
+export interface ToolbarProps {
     size?: ToolbarSize
     view?: ToolbarView
 }

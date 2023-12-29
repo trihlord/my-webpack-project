@@ -10,7 +10,7 @@ const iconProps = { size: 32 } as const
 type IconTypePropsTuple = Parameters<typeof provideIcon<typeof iconProps>>
 type IconType = IconTypePropsTuple[0]
 
-interface CardProps {
+export interface CardProps {
     children: ReactNode
     headline: ReactNode
     iconType: IconType
