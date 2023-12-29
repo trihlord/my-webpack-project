@@ -24,30 +24,18 @@ const cssHandler = {
 
 /** @type {import('webpack').Configuration} */
 const config = {
-    entry: './src/index.tsx',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        clean: true,
-    },
     devServer: {
-        open: true,
-        host: 'localhost',
         historyApiFallback: true,
+        host: 'localhost',
+        open: true,
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'index.html',
-        }),
-
-        // Add your plugins here
-        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
-    ],
+    entry: './src/index.tsx',
     module: {
         rules: [
             {
-                test: /\.(ts|tsx)$/i,
-                loader: 'ts-loader',
                 exclude: ['/node_modules/'],
+                loader: 'ts-loader',
+                test: /\.(ts|tsx)$/i,
             },
             {
                 test: /\.css$/i,
@@ -62,16 +50,28 @@ const config = {
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
+    output: {
+        clean: true,
+        path: path.resolve(__dirname, 'dist'),
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+        }),
+
+        // Add your plugins here
+        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    ],
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src/'),
         },
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
-    },
-    optimization: {
-        splitChunks: {
-            chunks: 'all',
-        },
     },
 }
 

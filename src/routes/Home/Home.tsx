@@ -9,13 +9,13 @@ function Home() {
     const { t } = useTranslation()
     return (
         <>
-            <Text typography={'headline-l'} weight={'bold'} as={'h1'}>
+            <Text as={'h1'} typography={'headline-l'} weight={'bold'}>
                 {t`Home Page`}
             </Text>
             <Toolbar size={'m'} view={'default'} />
             <Card
-                iconType={HelpOutline}
                 headline={t`No Items`}
+                iconType={HelpOutline}
                 subheader={t`No items still exist. Please create a new item first.`}
             >
                 <Button size={'m'} view={'default'}>

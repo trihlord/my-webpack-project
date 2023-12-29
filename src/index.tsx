@@ -1,9 +1,9 @@
 import { StrictMode, Suspense } from 'react'
 import { render } from 'react-dom'
+
 import App from './App'
 import { NodeEnv } from './constants/nodeEnv'
 import { Path } from './constants/path'
-
 import './lib/i18n'
 import './lib/theme'
 import './styles/index.css'
