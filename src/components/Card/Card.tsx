@@ -17,7 +17,7 @@ export interface CardProps {
     subheader: ReactNode
 }
 
-function Card({ children, headline, iconType, subheader }: CardProps) {
+export function Card({ children, headline, iconType, subheader }: CardProps) {
     return (
         <section className={styles.card}>
             {provideIcon(iconType, iconProps)(styles.icon)}
@@ -31,5 +31,3 @@ function Card({ children, headline, iconType, subheader }: CardProps) {
         </section>
     )
 }
-
-export default Card

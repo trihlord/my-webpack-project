@@ -1,11 +1,11 @@
-import Card from '@/components/Card'
-import Toolbar from '@/components/Toolbar'
+import { Card } from '@/components/Card'
+import { Toolbar } from '@/components/Toolbar'
 import { Button } from '@/lib/Button'
 import { Text } from '@/lib/Text'
 import { HelpOutline } from '@/lib/icons'
 import { useTranslation } from 'react-i18next'
 
-function Home() {
+export function Home() {
     const { t } = useTranslation()
     return (
         <>
@@ -25,5 +25,3 @@ function Home() {
         </>
     )
 }
-
-export default Home

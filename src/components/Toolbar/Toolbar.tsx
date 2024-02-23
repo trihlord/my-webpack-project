@@ -29,7 +29,7 @@ export interface ToolbarProps {
     view?: ToolbarView
 }
 
-function Toolbar({ size, view }: ToolbarProps) {
+export function Toolbar({ size, view }: ToolbarProps) {
     const { t } = useTranslation()
     const iconSize = getIconSize(size)
     return (
@@ -48,5 +48,3 @@ function Toolbar({ size, view }: ToolbarProps) {
         </div>
     )
 }
-
-export default Toolbar

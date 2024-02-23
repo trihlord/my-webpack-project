@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom'
 
 import styles from './Root.module.css'
 
-function Root() {
+export function Root() {
     return (
         <>
             <header className={styles.header}></header>
@@ -12,5 +12,3 @@ function Root() {
         </>
     )
 }
-
-export default Root

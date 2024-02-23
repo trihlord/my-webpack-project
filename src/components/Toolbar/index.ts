@@ -1,2 +1,1 @@
-export { default } from './Toolbar'
-export type { ToolbarProps } from './Toolbar'
+export * from './Toolbar'
