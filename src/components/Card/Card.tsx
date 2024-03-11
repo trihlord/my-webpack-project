@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
+import { provideIcon } from '@/components/provideIcon'
 import { Text } from '@/lib/Text'
-import { provideIcon } from '@/lib/provideIcon'
 
 import styles from './Card.module.css'
 

@@ -2,10 +2,10 @@ import type { IButtonProps } from '@/lib/Button'
 import type { ITextinputProps } from '@/lib/Textinput'
 import type { PlusProps, SearchProps } from '@/lib/icons'
 
+import { provideIcon } from '@/components/provideIcon'
 import { Button } from '@/lib/Button'
 import { Textinput } from '@/lib/Textinput'
 import { Plus, Search } from '@/lib/icons'
-import { provideIcon } from '@/lib/provideIcon'
 import { useTranslation } from 'react-i18next'
 
 import styles from './Toolbar.module.css'
