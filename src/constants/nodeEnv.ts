@@ -1,4 +1,4 @@
-export enum NodeEnv {
+export const enum NodeEnv {
     DEVELOPMENT = 'development',
     PRODUCTION = 'production',
 }

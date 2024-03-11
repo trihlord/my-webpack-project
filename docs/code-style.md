@@ -4,6 +4,7 @@
 
 -   [Components](#components)
 -   [Constants](#constants)
+-   [Docs](#docs)
 
 ## Components
 
@@ -48,4 +49,20 @@ src
 export enum MyEnumName = {
     CONSTANT_NAME = 'constantValue',
 }
+```
+
+## Docs
+
+```bash
+# at project root
+docs
+└── my-doc.md
+```
+
+```md
+<!-- at my-doc.md -->
+
+# My Doc
+
+My doc content.
 ```

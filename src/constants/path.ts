@@ -1,4 +1,4 @@
-export enum Path {
+export const enum Path {
     API = '/api',
     HOME = '/',
 }
